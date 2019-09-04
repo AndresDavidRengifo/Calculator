@@ -4,21 +4,24 @@ import java.util.Scanner;
 public class Calculator
 {
 	public double operating1, operating2, result;
-	public int restart;
 	public String operator;
 	Scanner reader;
+	boolean nonExistentOperator;
 	
 	/*--------------------------------------------------------------------------------------------------------------------------*/
 	
 	public static void main(String[] Args){
 		
 		reader = new Scanner(System.in);
-		Int ;
+		int restart, calculatorType;
 		do {
+		System.out.println("Select a way to use the calculator:\n1.One operation at time\n2.Flow of operations")
+		if(calculatorType = 1)
+		{
 		do {
 		System.out.println("Enter the operator you want to use, if you are not sure how to write it press the enter key.");
 		operator = reader.nextString();
-		while(operator = "null" || "") {
+		while(operator = "null" || operator = "") {
 		System.out.println("Addition: +\nSustraction: -\nMultiplication: *\nDivision: /\nModulus: %\nSine: sin");
 		System.out.println("Cosine: cos\nTangent: tan\nBase 10 Logarithm: log10\nBase n logarithm: log");
 		System.out.println("Square root: root2\nNth Root: root\nExponenttiation: ^");
@@ -26,12 +29,13 @@ public class Calculator
 		System.out.println("Convert decimals to hexadecimals: dh\nConvert decimals to binariess: db");
 		System.out.println("Convert hexadecimals to decimals: hd\nConvert hexadecimals to binaries: hb");
 		System.out.println("Convert binaries to decimals: bd\nConvert binaries to hexadecimals: bh");
+		Calculator.resultAssignation(double result);
 		}
 		}
-		while(operator = "null" || "");
+		while(operator = "null" || operator = "");
 		Calculator.resultAssignation(double result);	
 		System.out.println("El resultado es: " + result);
-		System.out.println("Do you want to do another operation?\n1. Si\n2. No");
+		System.out.println("Do you want to do another operation?\n1.Si\n2.No");
 		restart = reader.nextInt();
 	}
 	while (restart = 1);
@@ -304,7 +308,7 @@ public class Calculator
 			else if(operator.equalsIgnoreCase("bh"))
 				result = Calculator.makeConvertBinaryToHexadecimal(double operating1);
 			else 
-				String result = "Non-existent operator";
+				result = 0;
 	}
 	
 }
